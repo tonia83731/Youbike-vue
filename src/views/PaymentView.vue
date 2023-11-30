@@ -1,5 +1,5 @@
 <script>
-  import ThePaymentCard from '../components/ThePaymentCard.vue';
+  import ThePaymentCard from '../components/Card/ThePaymentCard.vue';
   export default {
     components: {
       ThePaymentCard

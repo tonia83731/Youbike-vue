@@ -1,5 +1,5 @@
 <script>
-import TheCheckbox from './TheCheckbox.vue';
+import TheCheckbox from './InputElement/TheCheckbox.vue';
 export default {
   props: {
     props: Array,

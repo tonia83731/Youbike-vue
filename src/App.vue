@@ -2,7 +2,7 @@
 import { computed } from 'vue';
 import { useGeolocation } from './utilities/useGeolocation';
 
-import TheHeader from './components/TheHeader.vue'
+import TheHeader from './components/Header/TheHeader.vue'
 
 export default {
   name: 'App',

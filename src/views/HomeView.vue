@@ -1,7 +1,7 @@
 <script>
-import TheCarousel from '../components/TheCarousel.vue';
-import TheCarouselSlide from '../components/TheCarouselSlide.vue';
-import TheUseStepCard from '../components/TheUseStepCard.vue';
+import TheCarousel from '../components/Carousel/TheCarousel.vue';
+import TheCarouselSlide from '../components/Carousel/TheCarouselSlide.vue';
+import TheUseStepCard from '../components/Card/TheUseStepCard.vue';
 export default {
   components: {
     TheCarousel,

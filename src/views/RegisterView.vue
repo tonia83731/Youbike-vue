@@ -1,7 +1,7 @@
 <script>
-import TheDefaultInput from '../components/TheDefaultInput.vue';
-import ThePasswordInput from '../components/ThePasswordInput.vue';
-import TheCheckbox from '../components/TheCheckbox.vue';
+import TheDefaultInput from '../components/InputElement/TheDefaultInput.vue';
+import ThePasswordInput from '../components/InputElement/ThePasswordInput.vue';
+import TheCheckbox from '../components/InputElement/TheCheckbox.vue';
 import TheGreenBtn from '../components/TheGreenBtn.vue';
 import TheGrayLink from '../components/TheGrayLink.vue';
 

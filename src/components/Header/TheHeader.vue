@@ -1,15 +1,12 @@
 <script>
   // import Logo from '../assets/logo.svg'
   import TheHeaderDropdown from './TheHeaderDropdown.vue'
-  import HamburgerIcon from '../assets/hamburgerIcon.svg'
-  import CloseIcon from '../assets/closeIcon.svg'
-  import { required } from '@vee-validate/rules'
+  import HamburgerIcon from '../../assets/hamburgerIcon.svg'
 
   export default {
     components: {
       TheHeaderDropdown,
-      HamburgerIcon,
-      CloseIcon
+      HamburgerIcon
     },
     data() {
       return {
@@ -29,7 +26,7 @@
   <header class="">
     <!-- Logo -->
     <router-link to="/" class="logo-group">
-      <img src="../assets/logo.svg" alt="" class="w-[65px] desktop:w-[95px]">
+      <img src="../../assets/logo.svg" alt="" class="w-[65px] desktop:w-[95px]">
     </router-link>
     <!-- Mobile Hamburger -->
     <input type="checkbox" id="nav-input" class="nav-input">

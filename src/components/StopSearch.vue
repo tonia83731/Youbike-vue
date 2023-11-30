@@ -1,6 +1,6 @@
 <script>
-import TheSearch from './TheSearch.vue';
-import TheDropDown from './TheDropDown.vue';
+import TheSearch from './InputElement/TheSearch.vue';
+import TheDropDown from './InputElement/TheDropDown.vue';
 export default {
   props: {
   },
