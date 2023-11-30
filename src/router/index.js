@@ -13,7 +13,24 @@ const router = createRouter({
     {
       path: '/instruction',
       name: 'instruction',
-      component: () => import('../views/InstructionView.vue')
+      children: [
+        {
+          path: 'borrow',
+          name: 'borrow',
+          component: () => import('../views/BorrowInstrucView.vue')
+        },
+        {
+          path: 'remind',
+          name: 'remind',
+          component: () => import('../views/RemindInstrcView.vue')
+        },
+        {
+          path: 'insurance',
+          name: 'insurance',
+          component: () => import('../views/InsuranceInstrcView.vue')
+        }
+      ]
+      // component: () => import('../views/InstructionView.vue')
     },
     {
       path: '/payment',

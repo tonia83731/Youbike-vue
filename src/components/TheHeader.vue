@@ -1,17 +1,24 @@
 <script>
   // import Logo from '../assets/logo.svg'
+  import TheHeaderDropdown from './TheHeaderDropdown.vue'
   import HamburgerIcon from '../assets/hamburgerIcon.svg'
   import CloseIcon from '../assets/closeIcon.svg'
   import { required } from '@vee-validate/rules'
 
   export default {
     components: {
+      TheHeaderDropdown,
       HamburgerIcon,
       CloseIcon
     },
     data() {
       return {
-        
+        headerActive: false,
+      }
+    },
+    methods: {
+      handleHeaderDropdown() {
+        return this.headerActive = !this.headerActive
       }
     }
   }
@@ -32,8 +39,16 @@
     <!-- Navbar -->
     <nav class="navbar">
       <ul class="nav-list">
-        <li class="nav-item">
-          <router-link to="/instruction">使用說明</router-link>
+        <li class="nav-item relative">
+          <button @click="handleHeaderDropdown">
+            使用說明
+            <span class="text-sm ml-[-4px]"><i class="fa-solid fa-angle-down"></i></span>
+          </button>
+          <TheHeaderDropdown :headerActive="headerActive">
+            <router-link to="/instruction/borrow" class="px-4 py-2 hover:bg-olive-green rounded-sm desktop:hover:bg-gray-input desktop:rounded-none">借還方式</router-link>
+            <router-link to="/instruction/remind" class="px-4 py-2 hover:bg-olive-green rounded-sm desktop:hover:hover:bg-gray-input desktop:rounded-none">騎乘須知</router-link>
+            <!-- <router-link to="/instruction/insurance" class="px-4 py-2 hover:bg-olive-green rounded-sm desktop:hover:hover:bg-gray-input desktop:rounded-none">自行車保險</router-link> -->
+          </TheHeaderDropdown>
         </li>
         <li class="nav-item">
           <router-link to="/payment">收費方式</router-link>
@@ -127,9 +142,25 @@
         color: #677510;
       }
     }
+    button {
+      font-style: normal;
+      font-weight: 500;
+      line-height: 24px;
+      letter-spacing: 3.24px;
+      color: #FFFFFF;
+      &.active {
+        color: #677510;
+      }
+    }
     @media screen and (min-width: 1080px) {
       all: unset;
       a {
+        color: #677510;
+        &.active {
+          color: #B5CC22;
+        }
+      }
+      button {
         color: #677510;
         &.active {
           color: #B5CC22;
