@@ -15,14 +15,19 @@ export default {
           id: 'code-borrow',
           title: '掃碼借車'
         },
-      ]
+      ],
+      tagSelected: 'card-borrow'
     }
   },
   computed: {
    
   },
   methods: {
-    
+    handleTagSwitch(target) {
+      console.log(target)
+      this.tagSelected = target.id
+      console.log(this.tagSelected)
+    }
   }
 }
 
@@ -32,7 +37,7 @@ export default {
 <template>
   <main class="container">
     <h2 class="main-title">借還方式</h2>
-    <TheSwitchTag :props="tagTitle"/>
+    <TheSwitchTag :props="tagTitle" :tagSelected="tagSelected" @tagSwitch="handleTagSwitch"/>
   </main>
 </template>
 <style></style>
