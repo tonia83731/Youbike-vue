@@ -9,15 +9,19 @@ export default {
       },
       'light-green': '#B5CC22',
       'olive-green': '#677510',
+
       gray: {
+        default: '#F6F6F6',
         border: '#EBEBEB',
         'table-border': '#AEAEAE',
         input: '#F3F3F3'
-      },
+      }
     },
     screens: {
+      'small-screen': '450px',
       mobile: '768px',
-      desktop: '1080px',
+      tablet: '900px',
+      desktop: '1080px'
     },
     extend: {}
   },

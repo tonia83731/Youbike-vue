@@ -1,6 +1,5 @@
 <script>
   import ThePaymentCard from '../components/ThePaymentCard.vue';
-
   export default {
     components: {
       ThePaymentCard
@@ -49,8 +48,8 @@
     </div>
     <div class="mt-8">
       <div class="text-olive-green font-bold text-lg">詳細說明</div>
-      <ul class="mt-2">
-        <li class="list-disc list-inside" v-for="(list, index) in moreInfo" :key="index">{{ list }}</li>
+      <ul class="mt-2 pl-6">
+        <li class="list-disc list-outside " v-for="(list, index) in moreInfo" :key="index">{{ list }}</li>
       </ul>
     </div>
   </main>
