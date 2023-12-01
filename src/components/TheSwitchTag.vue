@@ -3,6 +3,7 @@ export default {
   props: {
     props: Array,
     tagSelected: String,
+    customClass: String,
   },
   components: {
     
@@ -19,7 +20,7 @@ export default {
 </script>
 
 <template>
-  <ul class="grid grid-cols-2 text-center mobile:flex mobile:justify-start">
+  <ul class="grid text-center mobile:flex mobile:justify-start" :class="customClass">
     <button v-for="prop in props" :key="prop.id" :id="prop.id" type="button"  class="bg-default-white opacity-50 mobile:px-8 mobile:py-2" :class="{ 'selected': tagSelected === prop.id }" @click="handleTagSwitch">
       {{ prop.title }}
     </button>

@@ -92,7 +92,7 @@ export default {
     padding: 20px 20px 10px;
     // border: 0.5px solid #AEAEAE;
     border-radius: 0 8px 8px 8px;
-    position: relative;
+    // position: relative;
   }
   // .selected-area::before {
   //   content:" ";

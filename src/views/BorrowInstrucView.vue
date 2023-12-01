@@ -43,7 +43,7 @@ export default {
   <main class="bg-gray-border">
     <div class="container">
       <h2 class="main-title">借還方式</h2>
-      <TheSwitchTag :props="tagTitle" :tagSelected="tagSelected" @tagSwitch="handleTagSwitch"/>
+      <TheSwitchTag :props="tagTitle" :tagSelected="tagSelected" @tagSwitch="handleTagSwitch" customClass="grid-cols-2"/>
       <BorrowByCard :tagSelected="tagSelected"/>
       <BorrowByCode :tagSelected="tagSelected"/>
     </div>
