@@ -5,8 +5,22 @@ import TheCheckbox from '../components/InputElement/TheCheckbox.vue';
 import TheGreenBtn from '../components/TheGreenBtn.vue';
 import TheGrayLink from '../components/TheGrayLink.vue';
 
+import RegisterControlBar from '../components/Register/RegisterControlBar.vue';
+import RegisterStep1 from '../components/Register/RegisterStep1.vue';
+import RegisterStep2 from '../components/Register/RegisterStep2.vue';
+import RegisterStep3 from '../components/Register/RegisterStep3.vue';
+import RegisterFinished from '../components/Register/RegisterFinished.vue';
+import RegisterButtonGroup from '../components/Register/RegisterButtonGroup.vue';
+import { generateNumber } from '../utilities/generateNumbers';
+
 export default {
   components: {
+    RegisterControlBar,
+    RegisterStep1,
+    RegisterStep2,
+    RegisterStep3,
+    RegisterFinished,
+    RegisterButtonGroup,
     TheDefaultInput,
     ThePasswordInput,
     TheCheckbox,
@@ -14,10 +28,23 @@ export default {
     TheGrayLink
   },
   data() {
-    return {}
+    return {
+      currentActive: 1,
+      numberArr: this.generateStepNumber(),
+    }
   },
   methods: {
-    onLoginSubmit() { }
+    generateStepNumber() {
+      return generateNumber(1, 4);
+    },
+    prevClick() {
+      if (this.currentActive <= 1) this.currentActive = 1
+      else this.currentActive--
+    },
+    nextClick() {
+      if (this.currentActive >= this.numberArr.length) this.currentActive = this.numberArr.length
+      else this.currentActive++
+    },
   },
   created() { }
 }
@@ -31,31 +58,14 @@ export default {
         <router-link to="/login" class="w-full text-center bg-default-white rounded-t-lg px-4 py-2 opacity-50 mobile:w-fit">登入會員</router-link>
         <router-link to="/register" class="w-full text-center bg-default-white rounded-t-lg px-4 py-2 opacity-50 active mobile:w-fit">註冊會員</router-link>
       </div>
-      <div class="bg-default-white px-20 pt-8 pb-4 rounded-b-lg mobile:rounded-lg mobile:rounded-tr-none desktop:w-full">
-        <Form>
-          <TheDefaultInput label="使用者姓名" name="user-name" placeholder="使用者姓名" />
-          <TheDefaultInput label="身分證 / 居留證 / 護照號碼" name="user-id" placeholder="身分證號碼" />
-          <TheDefaultInput label="悠遊卡 / 一卡通號碼" name="easycard-num" placeholder="悠遊卡/一卡通號碼" />
-          <TheDefaultInput label="帳號" type="tel" name="tel" placeholder="手機號碼" />
-          <ThePasswordInput 
-            label="密碼"
-            name="password"
-            placeholder="密碼"
-          />
-          <ThePasswordInput 
-            label="密碼確認"
-            name="confirm-password"
-            placeholder="重複密碼進行確認"
-          />
-
-          <TheGreenBtn type="submit" name="註冊" customClass="mt-4 mb-2"/>
-        </Form>
-        <div class="flex justify-end">
-          <TheGrayLink link="/" name="首頁" />
-          <span class="text-gray-table-border">•</span>
-          <TheGrayLink link="/login" name="登入" />
-        </div>
-      </div>
+      <Form class="bg-default-white px-8 pt-8 pb-4 rounded-b-lg mobile:rounded-lg mobile:rounded-tr-none mobile:px-20 desktop:w-full">
+        <RegisterControlBar :numberArr="numberArr" :currentActive="currentActive"/>
+        <RegisterStep1 :currentActive="currentActive"/>
+        <RegisterStep2 :currentActive="currentActive"/>
+        <RegisterStep3 :currentActive="currentActive"/>
+        <RegisterFinished :numberArr="numberArr" :currentActive="currentActive"/>
+        <RegisterButtonGroup @prevStep="prevClick" @nextStep="nextClick" :numberArr="numberArr" :currentActive="currentActive"/>
+      </Form>
     </div>
   </main>
 </template>

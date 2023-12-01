@@ -36,12 +36,12 @@ import TheGrayLink from '../components/TheGrayLink.vue';
           <TheDefaultInput 
             label="帳號"
             type="tel"
-            name="tel"
+            name="login-tel"
             placeholder="手機號碼"
           />
           <ThePasswordInput 
             label="密碼"
-            name="password"
+            name="login-password"
             placeholder="密碼"
           />
           <TheCheckbox 

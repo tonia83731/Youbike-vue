@@ -3,6 +3,18 @@ export default {
   props: {
     label: String,
     name: String,
+    isChecked: Boolean,
+    isRequired: {
+      type: Boolean,
+      default: false,
+    },
+    inputValue: [String, Number],
+    onChange: Function
+  },
+  methods: {
+    handleChange(e) {
+      if(this.onChange) this.onChange(e.target.checked, e.target.value)
+    }
   },
   computed: {
     
@@ -14,9 +26,18 @@ export default {
   <div class="">
     <label :for="{ name }"  class="checkbox-label">
       {{ label }}
-      <input type="checkbox" :name="{ name }" :id="{ name }" 
-        class="checkbox-input" />
+      <input 
+        type="checkbox" 
+        :name="{ name }" 
+        :id="{ name }" 
+        class="checkbox-input" 
+        :checked="isChecked"
+        :required="isRequired"
+        :value="inputValue"
+        @change="handleChange"
+        />
       <span class="checkbox-span"></span>
+      <span v-if="isRequired" class="text-default-red">*</span>
     </label>
   </div>
 </template>
