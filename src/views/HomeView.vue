@@ -63,7 +63,7 @@ export default {
       </TheCarouselSlide>
     </TheCarousel>
 
-    <div class="container flex flex-col justify-center items-center tablet:grid tablet:grid-cols-[1fr_20px_1fr_20px_1fr_20px_1fr] tablet:justify-items-center">
+    <div class="container flex flex-col justify-center items-center mobile:grid mobile:grid-cols-[1fr_20px_1fr_20px] mobile:grid-rows-2 mobile:justify-items-center tablet:grid-cols-[1fr_20px_1fr_20px_1fr_20px_1fr] tablet:grid-rows-none">
       <TheUseStepCard 
         title="註冊 / 登入"
         text1="使用官方 APP、網站"
@@ -71,8 +71,8 @@ export default {
         imgSrc="/src/assets/LoginIcon.svg"
       />
       <div class="text-gray-table-border text-xl my-2">
-        <span class="tablet:hidden"><i class="fa-solid fa-angle-down"></i></span>
-        <span class="hidden tablet:block"><i class="fa-solid fa-chevron-right"></i></span>
+        <span class="mobile:hidden"><i class="fa-solid fa-angle-down"></i></span>
+        <span class="hidden mobile:block"><i class="fa-solid fa-chevron-right"></i></span>
       </div>
       <TheUseStepCard 
         title="租借"
@@ -81,8 +81,8 @@ export default {
         imgSrc="/src/assets/RentIcon.svg"
       />
       <div class="text-gray-table-border text-xl my-2">
-        <span class="tablet:hidden"><i class="fa-solid fa-angle-down"></i></span>
-        <span class="hidden tablet:block"><i class="fa-solid fa-chevron-right"></i></span>
+        <span class="mobile:hidden"><i class="fa-solid fa-angle-down"></i></span>
+        <span class="hidden mobile:block"><i class="fa-solid fa-chevron-right"></i></span>
       </div>
       <TheUseStepCard 
         title="騎乘"
@@ -91,8 +91,8 @@ export default {
         imgSrc="/src/assets/RideIcon.svg"
       />
       <div class="text-gray-table-border text-xl my-2">
-        <span class="tablet:hidden"><i class="fa-solid fa-angle-down"></i></span>
-        <span class="hidden tablet:block"><i class="fa-solid fa-chevron-right"></i></span>
+        <span class="mobile:hidden"><i class="fa-solid fa-angle-down"></i></span>
+        <span class="hidden mobile:block"><i class="fa-solid fa-chevron-right"></i></span>
       </div>
       <TheUseStepCard 
         title="還車"

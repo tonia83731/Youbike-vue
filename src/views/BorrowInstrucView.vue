@@ -1,10 +1,13 @@
 <script>
 import TheSwitchTag from '../components/TheSwitchTag.vue';
 import BorrowByCard from '../components/Borrow/BorrowByCard.vue';
+import BorrowByCode from '../components/Borrow/BorrowByCode.vue';
+
 export default {
   components: {
     TheSwitchTag,
-    BorrowByCard
+    BorrowByCard,
+    BorrowByCode
   },
   data() {
     return {
@@ -37,10 +40,13 @@ export default {
 </script>
 
 <template>
-  <main class="container">
-    <h2 class="main-title">借還方式</h2>
-    <TheSwitchTag :props="tagTitle" :tagSelected="tagSelected" @tagSwitch="handleTagSwitch"/>
-    <BorrowByCard />
+  <main class="bg-gray-border">
+    <div class="container">
+      <h2 class="main-title">借還方式</h2>
+      <TheSwitchTag :props="tagTitle" :tagSelected="tagSelected" @tagSwitch="handleTagSwitch"/>
+      <BorrowByCard :tagSelected="tagSelected"/>
+      <BorrowByCode :tagSelected="tagSelected"/>
+    </div>
   </main>
 </template>
 <style></style>
