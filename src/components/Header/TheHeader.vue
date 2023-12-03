@@ -54,7 +54,7 @@
           <router-link to="/stop-info">站點資訊</router-link>
         </li>
         <li class="nav-item">
-          <router-link to="/news">最新消息</router-link>
+          <router-link to="#">最新消息</router-link>
         </li>
       </ul>
       <div class="login-btn forMobile">

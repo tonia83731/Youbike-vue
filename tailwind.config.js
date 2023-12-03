@@ -22,7 +22,8 @@ export default {
       'small-screen': '450px',
       mobile: '768px',
       tablet: '900px',
-      desktop: '1080px'
+      desktop: '1080px',
+      upon: '1200px'
     },
     extend: {}
   },

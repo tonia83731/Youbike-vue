@@ -1,7 +1,7 @@
 import axios from "axios";
 const KaohsiungUrl =
-  'https://tdx.transportdata.tw/api/basic/v2/Bike/Station/City/Kaohsiung?%24format=JSON'
-// https://api.kcg.gov.tw/api/service/Get/b4dd9c40-9027-4125-8666-06bef1756092
+  'https://api.kcg.gov.tw:443/api/service/Get/b4dd9c40-9027-4125-8666-06bef1756092'
+  // 'https://tdx.transportdata.tw/api/basic/v2/Bike/Station/City/Kaohsiung?%24format=JSON'
 
 export const getKaohsiungYoubike = async () => {
   try {

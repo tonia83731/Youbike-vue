@@ -9,7 +9,8 @@ export default {
       default: false,
     },
     inputValue: [String, Number],
-    onChange: Function
+    onChange: Function,
+    customClass: String,
   },
   methods: {
     handleChange(e) {
@@ -23,13 +24,13 @@ export default {
 </script>
 
 <template>
-  <div class="">
-    <label :for="{ name }"  class="checkbox-label">
+  <div :class="customClass">
+    <label :for="name"  class="checkbox-label">
       {{ label }}
       <input 
         type="checkbox" 
-        :name="{ name }" 
-        :id="{ name }" 
+        :name="name" 
+        :id="name" 
         class="checkbox-input" 
         :checked="isChecked"
         :required="isRequired"
