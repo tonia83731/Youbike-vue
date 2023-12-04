@@ -7,6 +7,8 @@ import { required, email, min } from '@vee-validate/rules'
 import { localize, setLocale } from '@vee-validate/i18n'
 import zhTW from '@vee-validate/i18n/dist/locale/zh_TW.json'
 
+import { VueGeolocation } from 'vue-browser-geolocation'
+
 import App from './App.vue'
 import router from './router'
 
@@ -23,6 +25,7 @@ const app = createApp(App)
 
 app.use(createPinia())
 app.use(router)
+app.use(VueGeolocation)
 app.component('Form', Form)
 app.component('Field', Field)
 app.component('ErrorMessage', ErrorMessage)

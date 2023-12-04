@@ -19,7 +19,7 @@ export const getTaipeiYoubike = async () => {
 export const getTaipeiStation = async () => {
   try {
     const res = await axios.get(`${baseUrl}/Station/City/Taipei?%24format=JSON`, {
-      headers: getAuthorizationHeader()
+      headers: await getAuthorizationHeader()
     })
     return res.data
   } catch (error) {

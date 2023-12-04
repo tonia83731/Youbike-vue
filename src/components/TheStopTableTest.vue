@@ -27,12 +27,13 @@ export default {
       </tr>
     </thead>
     <tbody class="">
-      <tr v-for="stop in stops" :key="stop.sno" class="h-[72px] even:bg-gray-default">
-        <td class="stop-td">台北市</td>
-        <td class="stop-td">{{ stop.sarea }}</td>
-        <td class="stop-td">{{ replaceFuc(stop.sna) }}</td>
-        <td class="stop-td">{{ stop.tot }}</td>
-        <td class="stop-td">{{ stop.bemp }}</td>
+      <tr v-for="stop in stops" :key="stop.StationUID
+        " class="h-[72px] even:bg-gray-default">
+        <td class="stop-td" v-if="stop.AuthorityID === 'TPE'">台北市</td>
+        <td class="stop-td">sarea</td>
+        <td class="stop-td">{{ replaceFuc(stop.StationName.Zh_tw) }}</td>
+        <td class="stop-td">{{ stop.BikesCapacity }}</td>
+        <td class="stop-td">{{ stop.AvailableRentBikes }}</td>
       </tr>
     </tbody>
   </table>

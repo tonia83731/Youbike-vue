@@ -2,11 +2,14 @@
 import TheCarousel from '../components/Carousel/TheCarousel.vue';
 import TheCarouselSlide from '../components/Carousel/TheCarouselSlide.vue';
 import TheUseStepCard from '../components/Card/TheUseStepCard.vue';
+
+import GoogleMap from '../components/GoogleMap.vue';
 export default {
   components: {
     TheCarousel,
     TheCarouselSlide,
     TheUseStepCard,
+    GoogleMap,
   },
   data() {
     return {
@@ -101,28 +104,8 @@ export default {
         imgSrc="/src/assets/ReturnIcon.svg"
       />
     </div>
+    <!-- <GoogleMap /> -->
   </main>
 </template>
 <style></style>
 
-
-<!-- img -->
-<!-- Winner -->
-<!-- https://apis.youbike.com.tw/images/1670321389638f14eda4599.png -->
-<!-- YouBike2.0 -->
-<!-- https://apis.youbike.com.tw/images/16697877836386f0871e29f.png -->
-<!-- TPASS -->
-<!-- https://apis.youbike.com.tw/images/168835201264a2350c070ee.png  -->
-<!-- Insurance -->
-<!-- https://apis.youbike.com.tw/images/16442860616201d06da6356.jpg -->
-<!-- Job Oppourtunity -->
-<!-- https://apis.youbike.com.tw/images/15711497265da5d79e35482.jpg -->
-<!-- Fraud -->
-<!-- https://apis.youbike.com.tw/images/168930423664b0bcacac02f.png -->
-<!-- Environment Protect -->
-<!-- https://apis.youbike.com.tw/images/16976925056530bb59338f2.jpg -->
-<!-- Taipei/New Taipei Transfer -->
-<!-- https://apis.youbike.com.tw/images/169768320265309702a7ca5.png -->
-
-<!-- https://www.cool3c.com/article/151097 -->
-<!-- https://www.youbike.com.tw/region/taipei/ -->

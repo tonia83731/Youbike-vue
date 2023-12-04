@@ -7,12 +7,15 @@
   import TheStopTable from '../components/TheStopTable.vue';
   import ThePagination from '../components/ThePagination.vue';
   import TheStopTableTest from '../components/TheStopTableTest.vue';
+  import GoogleMap from '../components/GoogleMap.vue';
 
   export default {
   components: {
     StopSearch,
     TheStopTable,
+    TheStopTableTest,
     ThePagination,
+    GoogleMap
   },
   data() {
     return {
@@ -116,7 +119,7 @@
   created() {
     this.getTaipeiInfo()
     this.getTaipeiStation()
-    // this.getTaipeiAvailable()
+    this.getTaipeiAvailable()
   }
   // async mounted () {
 
@@ -129,11 +132,12 @@
     <!-- {{ getDistrict }} -->
     <!-- {{ getCityFullData }} -->
     <h2 class="main-title">站點資訊</h2>
-    <div class="desktop:grid desktop:grid-cols-2 desktop:gap-10 upon:grid-cols-[45%_55%]">
+    <div class="mb-12 desktop:grid desktop:grid-cols-2 desktop:gap-[1%] upon:grid-cols-[45%_54%]">
       <StopSearch :props="getDistrict"/>
+      <GoogleMap />
     </div>
-    <!-- <TheStopTableTest :stops="getCityFullData"/> -->
-    <TheStopTable :stops="updateShowData"/>
+    <TheStopTableTest :stops="getCityFullData"/>
+    <!-- <TheStopTable :stops="updateShowData"/> -->
     <ThePagination 
       :pages="showPage" 
       :totalPage="totalPage" 
